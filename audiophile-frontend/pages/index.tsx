@@ -24,15 +24,15 @@ const Home: React.FC = () => {
       alt="Headphone Banner"
       priority
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-        <h2 className="text-white text-xl md:text-2xl lg:text-3xl tracking-widest mb-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-10 text-center">
+        <h2 className="text-[#ffffff]/70 md:text-2xl lg:text-3xl tracking-[0.4em] mb-4">
           NEW PRODUCT
         </h2>
-        <div className="text-white text-xl md:text-2xl lg:text-3xl font-[900] tracking-widest mb-4 text-center">
+        <div className="text-white text-4xl md:text-5xl lg:text-6xl font-[900] tracking-wide mb-4 text-center">
           <h1>XX99 MARK II</h1>
           <h1>HEADPHONES</h1>
         </div>
-        <p className="text-white text-xl md:text-2xl lg:text-3xl tracking-widest mb-4 text-center">
+        <p className="text-white font-[100] md:text-2xl lg:text-3xl tracking-widest mb-4 text-center">
           Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
 
         </p>
