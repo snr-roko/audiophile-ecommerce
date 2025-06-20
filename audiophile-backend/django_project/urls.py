@@ -16,7 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+info = openapi.Info(
+  title="Audiophile Ecommerce",
+  description="Audiophile Ecommerce API",
+  default_version='v1',
+  terms_of_service="https://www.google.com/policies/terms/",
+  contact=openapi.Contact(email="rbbagyei@outlook.com"),
+  license=openapi.License(name="BSD License"),
+)
+
+schema_view = get_schema_view(
+  info,
+  public=True,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui')
 ]
