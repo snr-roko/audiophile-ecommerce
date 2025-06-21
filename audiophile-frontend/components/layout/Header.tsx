@@ -11,10 +11,10 @@ const Header: React.FC = () => {
         <Image src={menu} alt="menu" height={20} width={20} className="lg:hidden"/>
         <Image src={logo} width={140} height={140} alt="logo"/>
         <div className="hidden lg:flex gap-10">
-          <Link className="hover:text-[#FBAF85]" href="#">HOME</Link>
-          <Link className="hover:text-[#FBAF85]" href="#">HEADPHONES</Link>
-          <Link className="hover:text-[#FBAF85]" href="#">SPEAKERS</Link>
-          <Link className="hover:text-[#FBAF85]" href="#">EARPHONES</Link>
+          <Link className="hover:text-[#FBAF85]" href="/">HOME</Link>
+          <Link className="hover:text-[#FBAF85]" href="/headphones">HEADPHONES</Link>
+          <Link className="hover:text-[#FBAF85]" href="/speakers">SPEAKERS</Link>
+          <Link className="hover:text-[#FBAF85]" href="/earphones">EARPHONES</Link>
         </div>
         <Image src={shoppingCart} alt="shopping cart" height={20} width={20} />
       </div>
