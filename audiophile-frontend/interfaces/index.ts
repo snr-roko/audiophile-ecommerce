@@ -13,6 +13,7 @@ export interface CategoryCardProps {
   title: string
   category: string
   description: string
+  swap?:boolean
   action: () => void
 }
 

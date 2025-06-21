@@ -32,6 +32,7 @@ const Headphones: React.FC = () => {
           new={false}
           title="XX99 MARK I"
           category="HEADPHONES"
+          swap={true}
           description="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, music aficionados, and sound specialists like yourself."
           action={() => console.log('clicked')}
         />
