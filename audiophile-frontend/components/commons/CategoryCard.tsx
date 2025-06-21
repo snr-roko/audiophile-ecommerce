@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const CategoryCard: React.FC<CategoryCardProps> = (props) => {
   return (
-    <div className="lg:grid lg:grid-cols-2 lg:gap-30 lg:items-center flex flex-col gap-8">
+    <div className="lg:grid lg:grid-cols-2 lg:gap-30 flex flex-col gap-8">
       <div className={`${props.swap ? 'lg:order-2' : 'lg:order-1'}`}>
         <Image 
           src={props.mobileImageUrl}

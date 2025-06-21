@@ -11,7 +11,7 @@ const Speakers: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <CategoryHeader title="SPEAKERS" />
-      <div className="bg-[#ffffff] px-7 lg:px-30 py-20 flex flex-col gap-30">
+      <div className="bg-[#ffffff] px-7 lg:px-40 py-20 flex flex-col gap-30">
         <CategoryCard 
           mobileImageUrl={mobileSpeakerzx9Image}
           tabletImageUrl={tabletSpeakerzx9Image}
