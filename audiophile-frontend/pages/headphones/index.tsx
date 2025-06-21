@@ -10,6 +10,7 @@ import mobileHeadphonexx59Image from "@/public/assets/product-xx59-headphones/mo
 import tabletHeadphonexx59Image from "@/public/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg"
 import desktopHeadphonexx59Image from "@/public/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg"
 import CategoryStack from "@/components/commons/CategoryStack"
+import GearCard from "@/components/commons/GearCard"
 
 const Headphones: React.FC = () => {
   return (
@@ -49,6 +50,7 @@ const Headphones: React.FC = () => {
         />
       </div>
       <CategoryStack />
+      <GearCard />
     </div>
   )
 }

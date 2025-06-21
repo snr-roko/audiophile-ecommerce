@@ -7,6 +7,7 @@ import mobileSpeakerzx7Image from "@/public/assets/product-zx7-speaker/mobile/im
 import tabletSpeakerzx7Image from "@/public/assets/product-zx7-speaker/tablet/image-category-page-preview.jpg"
 import desktopSpeakerzx7Image from "@/public/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg"
 import CategoryStack from "@/components/commons/CategoryStack"
+import GearCard from "@/components/commons/GearCard";
 
 const Speakers: React.FC = () => {
   return (
@@ -36,6 +37,7 @@ const Speakers: React.FC = () => {
         />
       </div>
       <CategoryStack />
+      <GearCard />
     </div>
   )
 }
