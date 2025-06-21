@@ -6,13 +6,21 @@ export interface ReactComponentProps {
 }
 
 export interface CategoryCardProps {
-  imageUrl: string | StaticImageData
+  mobileImageUrl: string | StaticImageData
+  tabletImageUrl: string | StaticImageData
+  desktopImageUrl: string | StaticImageData
   new: boolean
   title: string
   category: string
   description: string
+  action: () => void
 }
 
 export interface CategoryHeaderProps{
   title: string
+}
+
+export interface ButtonProps {
+  text: string
+  action: () => void
 }
