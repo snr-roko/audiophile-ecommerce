@@ -30,3 +30,15 @@ export interface CategoryStackCardProps {
   imageUrl: string | StaticImageData
   category: string
 }
+
+export interface ProductInfoProps {
+  mobileImageUrl: string | StaticImageData
+  tabletImageUrl: string | StaticImageData
+  desktopImageUrl: string | StaticImageData
+  price: number
+  new: boolean
+  title: string
+  category: string
+  description: string
+  action: () => void
+}

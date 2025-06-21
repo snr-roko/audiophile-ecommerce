@@ -3,15 +3,17 @@ import CategoryStack from "@/components/commons/CategoryStack"
 import GearCard from "@/components/commons/GearCard"
 import { useRouter } from "next/router";
 
-const Products:React.FC = () => {
+const Products: React.FC = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-  const [data, setData] = useState([])
+  const [product, setProduct] = useState<any>(null)
   const [error, setError] = useState<Error | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
+    if (!slug) return;
+    
     setIsLoading(true)
     fetch("/data.json")
       .then((res) => {
@@ -19,15 +21,15 @@ const Products:React.FC = () => {
         return res.json()
       })
       .then((data) => {
-        setData(data)
-        console.log(data)
+        const foundProduct = data.find((item: any) => item.slug === slug);
+        setProduct(foundProduct)
         setIsLoading(false)
       })
       .catch((err) => {
         setError(err)
         setIsLoading(false)
       })
-  }, [])
+  }, [slug])
 
   if (isLoading) {
     return ( 
@@ -49,14 +51,15 @@ const Products:React.FC = () => {
     )
   }
 
-  const product = data.find(
-    (item: any) => item.slug === slug
-  );
-
   if (!product) {
-    return <div>Product not found.</div>;
+    return (
+      <div>
+        <div>Product not found.</div>
+        <CategoryStack />
+        <GearCard />
+      </div>
+    )
   }
-
 
   return (
     <div>
