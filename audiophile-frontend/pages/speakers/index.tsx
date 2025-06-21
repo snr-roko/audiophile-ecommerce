@@ -6,6 +6,7 @@ import desktopSpeakerzx9Image from "@/public/assets/product-zx9-speaker/desktop/
 import mobileSpeakerzx7Image from "@/public/assets/product-zx7-speaker/mobile/image-category-page-preview.jpg"
 import tabletSpeakerzx7Image from "@/public/assets/product-zx7-speaker/tablet/image-category-page-preview.jpg"
 import desktopSpeakerzx7Image from "@/public/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg"
+import CategoryStack from "@/components/commons/CategoryStack"
 
 const Speakers: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const Speakers: React.FC = () => {
           action={() => console.log('clicked')}
         />
       </div>
+      <CategoryStack />
     </div>
   )
 }

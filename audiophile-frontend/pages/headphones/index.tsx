@@ -9,6 +9,7 @@ import desktopHeadphonesxx991Image from "@/public/assets/product-xx99-mark-one-h
 import mobileHeadphonexx59Image from "@/public/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg"
 import tabletHeadphonexx59Image from "@/public/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg"
 import desktopHeadphonexx59Image from "@/public/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg"
+import CategoryStack from "@/components/commons/CategoryStack"
 
 const Headphones: React.FC = () => {
   return (
@@ -47,6 +48,7 @@ const Headphones: React.FC = () => {
           action={() => console.log('clicked')}
         />
       </div>
+      <CategoryStack />
     </div>
   )
 }

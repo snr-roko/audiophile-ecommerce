@@ -3,6 +3,8 @@ import CategoryCard from "@/components/commons/CategoryCard";
 import mobileEarphoneImage from "@/public/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg"
 import tabletEarphoneImage from "@/public/assets/product-yx1-earphones/tablet/image-category-page-preview.jpg"
 import desktopEarphoneImage from "@/public/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
+import CategoryStack from "@/components/commons/CategoryStack"
+
 
 const Earphones: React.FC = () => {
   return (
@@ -20,6 +22,7 @@ const Earphones: React.FC = () => {
           action={() => console.log('clicked')}
         />
       </div>
+      <CategoryStack />
     </div>
   )
 }
