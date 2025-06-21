@@ -11,7 +11,7 @@ const Speakers: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <CategoryHeader title="SPEAKERS" />
-      <div className="bg-[#ffffff] px-7 lg:px-30 py-20 flex flex-col gap-15">
+      <div className="bg-[#ffffff] px-7 lg:px-30 py-20 flex flex-col gap-30">
         <CategoryCard 
           mobileImageUrl={mobileSpeakerzx9Image}
           tabletImageUrl={tabletSpeakerzx9Image}
@@ -26,6 +26,7 @@ const Speakers: React.FC = () => {
           mobileImageUrl={mobileSpeakerzx7Image}
           tabletImageUrl={tabletSpeakerzx7Image}
           desktopImageUrl={desktopSpeakerzx7Image}
+          swap={true}
           new={false}
           title="ZX7"
           category="SPEAKER"

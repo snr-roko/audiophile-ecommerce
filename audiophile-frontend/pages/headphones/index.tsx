@@ -14,7 +14,7 @@ const Headphones: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <CategoryHeader title="HEADPHONES" />
-      <div className="bg-[#ffffff] px-7 lg:px-30 py-20 flex flex-col gap-15" >
+      <div className="bg-[#ffffff] px-7 lg:px-30 py-20 flex flex-col gap-30" >
         <CategoryCard
           mobileImageUrl={mobileHeadphonexx992Image}
           tabletImageUrl={tabletHeadphonexx992Image}
