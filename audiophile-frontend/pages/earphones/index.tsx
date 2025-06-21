@@ -8,7 +8,7 @@ const Earphones: React.FC = () => {
   return (
     <div>
       <CategoryHeader title="EARPHONES" />
-      <div className="bg-[#ffffff] px-7 lg:px-30 py-10">
+      <div className="bg-[#ffffff] px-7 lg:px-30 py-20">
         <CategoryCard 
           mobileImageUrl={mobileEarphoneImage}
           tabletImageUrl={tabletEarphoneImage}
