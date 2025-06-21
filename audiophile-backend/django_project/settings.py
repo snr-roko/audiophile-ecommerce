@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # third-party apps
     'rest_framework',
     'drf_yasg',
+    # local apps
+    'products.apps.ProductsConfig',
 
 ]
 
