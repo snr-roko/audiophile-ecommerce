@@ -19,7 +19,7 @@ const GearCard: React.FC = () => {
         />
         <Image 
         src={gearImageDesktop}
-        className="hidden lg:block"
+        className="hidden lg:block lg:object-contain lg:h-auto"
         alt="Gear Image"
         />                
       </div>
