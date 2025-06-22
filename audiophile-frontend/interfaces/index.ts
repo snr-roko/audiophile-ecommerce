@@ -54,3 +54,13 @@ export interface ProductDetailProps {
   description: string
   action: () => void
 }
+
+export interface ProductIncludesProps {
+  quantity: number
+  item: string
+}
+
+export interface ProductFeatureProps {
+  feature: string
+  includes: ProductIncludesProps[] 
+}

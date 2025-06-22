@@ -69,7 +69,7 @@ const Products: React.FC = () => {
         tabletMainImageUrl={product.image.tablet}
         desktopMainImageUrl={product.image.desktop}
         new={product.new}
-        title={product.name.split(' ').slice(0, -1).join(' ')}
+        title={product.name.split(' ').slice(0, -1).join(' ').toUpperCase()}
         category={product.category.toUpperCase()}
         description={product.description}
         price={product.price}
