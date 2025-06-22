@@ -29,6 +29,7 @@ export interface ButtonProps {
 export interface CategoryStackCardProps {
   imageUrl: string | StaticImageData
   category: string
+  action: () => void
 }
 
 export interface ProductInfoProps {
