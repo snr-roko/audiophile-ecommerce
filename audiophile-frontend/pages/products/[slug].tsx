@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import CategoryStack from "@/components/commons/CategoryStack"
 import GearCard from "@/components/commons/GearCard"
 import { useRouter } from "next/router";
+import ProductDetail from "@/components/commons/ProductDetail";
 
 const Products: React.FC = () => {
   const router = useRouter();
@@ -63,6 +64,17 @@ const Products: React.FC = () => {
 
   return (
     <div>
+      <ProductDetail
+        mobileMainImageUrl={product.image.mobile}
+        tabletMainImageUrl={product.image.tablet}
+        desktopMainImageUrl={product.image.desktop}
+        new={product.new}
+        title={product.name.split(' ').slice(0, -1).join(' ')}
+        category={product.category.toUpperCase()}
+        description={product.description}
+        price={product.price}
+        action={() => console.log('clicked')} 
+      />
       <CategoryStack />
       <GearCard />
     </div>

@@ -42,3 +42,15 @@ export interface ProductInfoProps {
   description: string
   action: () => void
 }
+
+export interface ProductDetailProps {
+  mobileMainImageUrl: string | StaticImageData
+  tabletMainImageUrl: string | StaticImageData
+  desktopMainImageUrl: string | StaticImageData
+  price: number
+  new: boolean
+  title: string
+  category: string
+  description: string
+  action: () => void
+}
