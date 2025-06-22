@@ -32,7 +32,7 @@ const Cart: React.FC = () => {
   const itemsCount: number = cart.items.length
   return (
     <div>
-      <dialog open={showMOdal} onClose={}>
+      <dialog open={showMOdal}>
         <div>
           <h2>CART ({itemsCount})</h2>
           <p>Remove all</p>
