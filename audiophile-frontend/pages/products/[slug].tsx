@@ -71,7 +71,7 @@ const Products: React.FC = () => {
     tabletImageUrl: product.others[0].image.tablet,
     desktopImageUrl: product.others[0].image.desktop,
     item: product.others[0].name.toUpperCase(),
-    action: () => console.log('clicked')
+    action: () => router.push(`/products/${product.others[0].slug}`)
   }
 
   const secondOtherProduct: ProductOtherCardProps = {
@@ -79,7 +79,7 @@ const Products: React.FC = () => {
     tabletImageUrl: product.others[1].image.tablet,
     desktopImageUrl: product.others[1].image.desktop,
     item: product.others[1].name.toUpperCase(),
-    action: () => console.log('clicked')    
+    action: () => router.push(`/products/${product.others[1].slug}`)    
   }
 
   const thirdOtherProduct: ProductOtherCardProps = {
@@ -87,7 +87,7 @@ const Products: React.FC = () => {
     tabletImageUrl: product.others[2].image.tablet,
     desktopImageUrl: product.others[2].image.desktop,
     item: product.others[2].name.toUpperCase(),
-    action: () => console.log('clicked')    
+    action: () => router.push(`/products/${product.others[2].slug}`)    
   }
 
   return (

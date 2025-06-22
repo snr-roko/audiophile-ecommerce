@@ -5,7 +5,7 @@ const ProductOthers: React.FC<ProductOthersProps> = ({ firstOtherProduct, second
   return (
     <div className="flex flex-col gap-5" >
       <h2 className="text-[#000000] font-[800] text-center text-2xl md:tracking-wide">YOU MAY ALSO LIKE</h2>
-      <div className="flex flex-col justify-center items-center gap-10 md:flex-row md:justify-between">
+      <div className="flex flex-col justify-center items-center gap-20 md:flex-row md:justify-between">
         <ProductOthersCard
           mobileImageUrl={firstOtherProduct.mobileImageUrl}
           tabletImageUrl={firstOtherProduct.tabletImageUrl}
