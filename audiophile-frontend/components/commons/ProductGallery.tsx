@@ -3,8 +3,8 @@ import Image from "next/image"
 
 const ProductGallery:React.FC<ProductGalleryProps> = (props) => {
   return (
-    <div className="flex gap-3 md:flex-col">
-      <div>
+    <div className="flex gap-5 flex-col md:flex-row lg:gap-7">
+      <div className="flex gap-5 flex-col lg:gap-7">
         <div>
           <Image
             src={props.firstMobileImageUrl}
@@ -58,21 +58,21 @@ const ProductGallery:React.FC<ProductGalleryProps> = (props) => {
             alt="Gallery Second Image"
             className="md:hidden"
             width={327}
-            height={174}
+            height={368}
           />
         <Image 
           src={props.thirdTabletImageUrl}
           alt="Gallery First Image"
           className="hidden md:block lg:hidden"
-          width={277}
-          height={174}
+          width={395}
+          height={368}
         />
         <Image 
           src={props.thirdDesktopImageUrl}
           alt="Gallery First Image"
           className="hidden lg:block object-contain"
-          width={445}
-          height={280}
+          width={635}
+          height={590}
         />
       </div>  
     </div>

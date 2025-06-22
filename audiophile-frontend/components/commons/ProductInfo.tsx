@@ -48,7 +48,7 @@ const ProductInfo: React.FC<ProductInfoProps> = (props) => {
           <h2 className="text-[#000000] text-left font-[800] text-2xl md:tracking-wide">{props.title}</h2>
           <h2 className="text-[#000000] font-[800] text-left text-2xl md:tracking-wide">{props.category}</h2>
         </div>
-        <p className="text-[#000000]/40 font-[300] text-sm text-left lg:w-4/5">{props.description}</p>
+        <p className="text-[#000000]/60 font-[300] text-sm text-left lg:w-4/5">{props.description}</p>
         <p className="text-[#000000] font-[800]">$ {props.price}</p>
         <div className="grid grid-cols-2 gap-4">
           <input 

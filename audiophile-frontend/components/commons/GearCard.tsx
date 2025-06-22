@@ -5,7 +5,7 @@ import gearImageDesktop from "@/public/assets/shared/desktop/image-best-gear.jpg
 
 const GearCard: React.FC = () => {
   return (
-    <div className="px-7 lg:px-40 py-20 grid grid-cols-1 gap-20 bg-[#FFFFFF] lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-20 bg-[#FFFFFF] lg:grid-cols-2">
       <div className="lg:order-2">
         <Image 
         src={gearImageMobile}

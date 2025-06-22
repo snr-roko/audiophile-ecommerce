@@ -3,7 +3,7 @@ import { ProductDetailProps } from "@/interfaces"
 
 const ProductDetail: React.FC<ProductDetailProps> = (props) => {
   return (
-    <div className="bg-[#ffffff] px-7 lg:px-40 py-20 flex flex-col gap-30">
+    <div>
       <ProductInfo
         mobileImageUrl={props.mobileMainImageUrl}
         tabletImageUrl={props.tabletMainImageUrl}
