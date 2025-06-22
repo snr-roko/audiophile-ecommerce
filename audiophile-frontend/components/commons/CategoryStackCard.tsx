@@ -11,7 +11,7 @@ const CategoryStackCard: React.FC<CategoryStackCardProps> = ({ imageUrl, categor
           className="object-contain"
         />
       </div>
-      <div className="mt-10">
+      <div className="mt-15">
         <h3 className="text-sm mb-2 text-center text-[#000000]">{category}</h3>
         <div onClick={action} className="flex gap-2 justify-center items-center">
           <h2 className="text-center text-[#000000]/50 text-sm">SHOP</h2>
