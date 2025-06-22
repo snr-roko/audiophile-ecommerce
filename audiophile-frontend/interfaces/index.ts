@@ -103,4 +103,34 @@ export interface CartProps {
   items: CartItemProps[]
 }
 
+export interface ImageProps {
+  mobile: string | StaticImageData
+  tablet: string | StaticImageData
+  desktop: string | StaticImageData
+}
 
+export interface GalleryProps {
+  first: ImageProps
+  second: ImageProps
+  third: ImageProps
+}
+
+export interface OtherProps {
+  slug: string,
+  name: string,
+  image: ImageProps
+}
+
+export interface ProductProps {
+  slug: string,
+  name: string,
+  image: ImageProps
+  category: string,
+  new: boolean,
+  price: number,
+  description: string,
+  includes: ProductIncludesProps[],
+  features: string
+  gallery: GalleryProps
+  others: OtherProps[]
+}

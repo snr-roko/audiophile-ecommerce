@@ -21,11 +21,11 @@ const ProductOthers: React.FC<ProductOthersProps> = ({ firstOtherProduct, second
           action={secondOtherProduct.action}
         />
         <ProductOthersCard
-          mobileImageUrl={secondOtherProduct.mobileImageUrl}
-          tabletImageUrl={secondOtherProduct.tabletImageUrl}
-          desktopImageUrl={secondOtherProduct.desktopImageUrl}
-          item={secondOtherProduct.item}
-          action={secondOtherProduct.action}
+          mobileImageUrl={thirdOtherProduct.mobileImageUrl}
+          tabletImageUrl={thirdOtherProduct.tabletImageUrl}
+          desktopImageUrl={thirdOtherProduct.desktopImageUrl}
+          item={thirdOtherProduct.item}
+          action={thirdOtherProduct.action}
         />
       </div>
     </div>

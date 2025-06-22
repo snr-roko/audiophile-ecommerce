@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           </nav>
         </div>
         <div className="lg:flex lg:justify-between lg:w-full">
-          <p className="text-center text-[#ffffff]/70 md:text-left lg:flex-1/2">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of your personal audio. Come and visit our demo facility - we're open 7 days a week.</p>
+          <p className="text-center text-[#ffffff]/70 md:text-left lg:flex-1/2">Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a small team of music lovers and sound specialists who are devoted to helping you get the most out of your personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.</p>
           <div className=" hidden lg:flex justify-center gap-4 lg:flex-1/2 lg:items-end lg:justify-end">
               <Image src={facebook} alt="facebook" height={20} width={25}/>
               <Image src={twitter} alt="twitter" height={20} width={25}/>
@@ -35,7 +35,6 @@ const Footer: React.FC = () => {
           </div>
         </div>        
       </div>
-
     </footer>
   )
 }

@@ -6,7 +6,7 @@ import { useRouter } from "next/router"
 
 const Cart: React.FC = () => {
   const [cart, setCart] = useState< CartProps>({'items': []})
-  const [showMOdal, setShowModal] = useState<boolean>(false)
+  // const [showMOdal, setShowModal] = useState<boolean>(false)
 
   const router = useRouter()
 
@@ -32,7 +32,7 @@ const Cart: React.FC = () => {
   const itemsCount: number = cart.items.length
   return (
     <div>
-      <dialog open={showMOdal}>
+      <dialog>
         <div>
           <h2>CART ({itemsCount})</h2>
           <p>Remove all</p>
