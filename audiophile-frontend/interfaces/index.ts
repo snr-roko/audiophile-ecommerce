@@ -91,3 +91,16 @@ export interface ProductOthersProps {
   secondOtherProduct: ProductOtherCardProps
   thirdOtherProduct: ProductOtherCardProps
 }
+
+export interface CartItemProps {
+  item: string
+  slug: string
+  quantity: number
+  price: number
+}
+
+export interface CartProps {
+  items: CartItemProps[]
+}
+
+
