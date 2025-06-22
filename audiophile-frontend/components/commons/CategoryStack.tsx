@@ -5,7 +5,7 @@ import earphonesCategoryImage from "@/public/assets/shared/desktop/image-categor
 
 const CategoryStack: React.FC = () => {
   return (
-    <div className="py-10 flex flex-col gap-30 w-full md:flex-row md:gap-10 bg-[#FFFFFF]" >
+    <div className="pt-15 flex flex-col gap-30 w-full md:flex-row md:gap-10 bg-[#FFFFFF]" >
       <CategoryStackCard imageUrl={headphonesCategoryImage} category="HEADPHONES" />
       <CategoryStackCard imageUrl={speakersCategoryImage} category="SPEAKERS" />
       <CategoryStackCard imageUrl={earphonesCategoryImage} category="EARPHONES" />

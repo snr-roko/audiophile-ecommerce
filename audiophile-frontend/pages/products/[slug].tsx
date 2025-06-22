@@ -39,7 +39,7 @@ const Products: React.FC = () => {
   if (isLoading) {
     return ( 
     <div>
-      <div className="text-[#000000] font-[800] text-center text-2xl md:tracking-wide">Please wait...</div>
+      <div className="text-[#000000] font-[800] text-center text-2xl md:tracking-wide my-20">Please wait...</div>
       <CategoryStack />
       <GearCard />
     </div>
@@ -49,7 +49,7 @@ const Products: React.FC = () => {
   if (error) {
     return (
       <div>
-        <div className="text-[#000000] font-[800] text-center text-2xl md:tracking-wide">Error: {error.message}</div>
+        <div className="text-[#000000] font-[800] text-center text-2xl md:tracking-wide my-20">Error: {error.message}</div>
         <CategoryStack />
         <GearCard />
       </div>
@@ -59,7 +59,7 @@ const Products: React.FC = () => {
   if (!product) {
     return (
       <div>
-        <div className="text-[#000000] font-[800] text-center text-2xl md:tracking-wide">Product not found.</div>
+        <div className="text-[#000000] font-[800] text-center text-2xl md:tracking-wide my-20">Product not found.</div>
         <CategoryStack />
         <GearCard />
       </div>
