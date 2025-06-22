@@ -3,6 +3,10 @@ import CategoryStack from "@/components/commons/CategoryStack"
 import GearCard from "@/components/commons/GearCard"
 import { useRouter } from "next/router";
 import ProductDetail from "@/components/commons/ProductDetail";
+import ProductOthers from "@/components/commons/ProductOthers";
+import ProductFeature from "@/components/commons/ProductFeature";
+import ProductGallery from "@/components/commons/ProductGallery";
+import { ProductOtherCardProps } from "@/interfaces";
 
 const Products: React.FC = () => {
   const router = useRouter();
@@ -62,6 +66,30 @@ const Products: React.FC = () => {
     )
   }
 
+  const firstOtherProduct: ProductOtherCardProps = {
+    mobileImageUrl: product.others[0].image.mobile,
+    tabletImageUrl: product.others[0].image.tablet,
+    desktopImageUrl: product.others[0].image.desktop,
+    item: product.others[0].name.toUpperCase(),
+    action: () => console.log('clicked')
+  }
+
+  const secondOtherProduct: ProductOtherCardProps = {
+    mobileImageUrl: product.others[1].image.mobile,
+    tabletImageUrl: product.others[1].image.tablet,
+    desktopImageUrl: product.others[1].image.desktop,
+    item: product.others[1].name.toUpperCase(),
+    action: () => console.log('clicked')    
+  }
+
+  const thirdOtherProduct: ProductOtherCardProps = {
+    mobileImageUrl: product.others[2].image.mobile,
+    tabletImageUrl: product.others[2].image.tablet,
+    desktopImageUrl: product.others[2].image.desktop,
+    item: product.others[2].name.toUpperCase(),
+    action: () => console.log('clicked')    
+  }
+
   return (
     <div>
       <ProductDetail
@@ -74,6 +102,26 @@ const Products: React.FC = () => {
         description={product.description}
         price={product.price}
         action={() => console.log('clicked')} 
+      />
+      <ProductFeature
+        feature={product.features}
+        includes={product.includes}
+      />
+      <ProductGallery
+        firstMobileImageUrl={product.gallery.first.mobile}
+        firstTabletImageUrl={product.gallery.first.tablet}
+        firstDesktopImageUrl={product.gallery.first.desktop}
+        secondMobileImageUrl={product.gallery.second.mobile}
+        secondTabletImageUrl={product.gallery.second.tablet}
+        secondDesktopImageUrl={product.gallery.second.desktop}
+        thirdMobileImageUrl={product.gallery.third.mobile}
+        thirdTabletImageUrl={product.gallery.third.tablet}
+        thirdDesktopImageUrl={product.gallery.third.desktop}        
+      />
+      <ProductOthers
+        firstOtherProduct={firstOtherProduct}
+        secondOtherProduct={secondOtherProduct}
+        thirdOtherProduct={thirdOtherProduct}
       />
       <CategoryStack />
       <GearCard />

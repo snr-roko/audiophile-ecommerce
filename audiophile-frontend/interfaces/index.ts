@@ -76,3 +76,17 @@ export interface ProductGalleryProps {
   thirdTabletImageUrl: string | StaticImageData
   thirdDesktopImageUrl: string | StaticImageData
 }
+
+export interface ProductOtherCardProps {
+  mobileImageUrl: string | StaticImageData
+  tabletImageUrl: string | StaticImageData
+  desktopImageUrl: string | StaticImageData
+  item: string
+  action: () => void  
+}
+
+export interface ProductOthersProps {
+  firstOtherProduct: ProductOtherCardProps
+  secondOtherProduct: ProductOtherCardProps
+  thirdOtherProduct: ProductOtherCardProps
+}
