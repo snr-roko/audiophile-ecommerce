@@ -64,3 +64,15 @@ export interface ProductFeatureProps {
   feature: string
   includes: ProductIncludesProps[] 
 }
+
+export interface ProductGalleryProps {
+  firstMobileImageUrl: string | StaticImageData
+  firstTabletImageUrl: string | StaticImageData
+  firstDesktopImageUrl: string | StaticImageData
+  secondMobileImageUrl: string | StaticImageData
+  secondTabletImageUrl: string | StaticImageData
+  secondDesktopImageUrl: string | StaticImageData
+  thirdMobileImageUrl: string | StaticImageData
+  thirdTabletImageUrl: string | StaticImageData
+  thirdDesktopImageUrl: string | StaticImageData
+}

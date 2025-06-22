@@ -23,21 +23,21 @@ const ProductInfo: React.FC<ProductInfoProps> = (props) => {
         <Image 
           src={props.mobileImageUrl}
           alt={`${props.title} image`}
-          className="md:hidden w-full h-auto"
+          className="md:hidden"
           width={327}
           height={327}
         />
         <Image 
           src={props.tabletImageUrl}
           alt={`${props.title} image`}
-          className="hidden md:block lg:hidden w-full h-auto"
+          className="hidden md:block lg:hidden"
           width={281}
           height={400}
         />
         <Image 
           src={props.desktopImageUrl}
           alt={`${props.title} image`}
-          className="hidden lg:block w-full h-auto object-contain"
+          className="hidden lg:block object-contain"
           width={540}
           height={560}
         />
