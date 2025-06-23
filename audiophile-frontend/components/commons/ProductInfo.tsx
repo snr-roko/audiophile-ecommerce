@@ -1,4 +1,4 @@
-import { ProductInfoProps } from "@/interfaces"
+import { CartItemProps, ProductInfoProps } from "@/interfaces"
 import Image from "next/image"
 import Button from "./Button"
 import { useState } from "react"
@@ -12,7 +12,7 @@ const ProductInfo: React.FC<ProductInfoProps> = (props) => {
     const existingCart = localStorage.getItem('audiophile-cart')
     const cartItems = existingCart ? JSON.parse(existingCart) : []
     
-    const existingItemIndex = cartItems.findIndex((item: any) => item.slug === props.slug)
+    const existingItemIndex = cartItems.findIndex((item: CartItemProps) => item.slug === props.slug)
     
     if (existingItemIndex >= 0) {
       cartItems[existingItemIndex].quantity += quantity
