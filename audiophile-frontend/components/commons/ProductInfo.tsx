@@ -14,7 +14,25 @@ const ProductInfo: React.FC<ProductInfoProps> = (props) => {
   }
 
   const handleAddToCart = () => {
-    // props.action(quantity)
+    const existingCart = localStorage.getItem('audiophile-cart')
+    const cartItems = existingCart ? JSON.parse(existingCart) : []
+    
+    const existingItemIndex = cartItems.findIndex((item: any) => item.slug === props.slug)
+    
+    if (existingItemIndex >= 0) {
+      cartItems[existingItemIndex].quantity += quantity
+    } else {
+      cartItems.push({
+        slug: props.slug,
+        item: props.title,
+        price: props.price,
+        quantity: quantity,
+        imageUrl: props.mobileImageUrl
+      })
+    }
+    
+    localStorage.setItem('audiophile-cart', JSON.stringify(cartItems))
+    setQuantity(1)
   }
 
   return (

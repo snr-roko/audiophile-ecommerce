@@ -13,6 +13,7 @@ const ProductDetail: React.FC<ProductDetailProps> = (props) => {
         category={props.category}
         description={props.description}
         price={props.price}
+        slug={props.slug}
         action={props.action}
       />
     </div>

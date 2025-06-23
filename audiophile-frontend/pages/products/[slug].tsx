@@ -101,6 +101,7 @@ const Products: React.FC = () => {
         category={product.category.toUpperCase()}
         description={product.description}
         price={product.price}
+        slug={product.slug}
         action={() => console.log('clicked')} 
       />
       <ProductFeature

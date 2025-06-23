@@ -41,6 +41,7 @@ export interface ProductInfoProps {
   title: string
   category: string
   description: string
+  slug: string
   action: () => void
 }
 
@@ -53,6 +54,7 @@ export interface ProductDetailProps {
   title: string
   category: string
   description: string
+  slug: string
   action: () => void
 }
 
@@ -95,6 +97,7 @@ export interface ProductOthersProps {
 export interface CartItemProps {
   item: string
   slug: string
+  imageUrl: string | StaticImageData
   quantity: number
   price: number
 }
