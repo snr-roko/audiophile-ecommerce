@@ -6,13 +6,13 @@ import ProductDetail from "@/components/commons/ProductDetail";
 import ProductOthers from "@/components/commons/ProductOthers";
 import ProductFeature from "@/components/commons/ProductFeature";
 import ProductGallery from "@/components/commons/ProductGallery";
-import { ProductOtherCardProps } from "@/interfaces";
+import { ProductOtherCardProps, ProductProps } from "@/interfaces";
 
 const Products: React.FC = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-  const [product, setProduct] = useState<any>(null)
+  const [product, setProduct] = useState<ProductProps | null>(null)
   const [error, setError] = useState<Error | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -26,7 +26,7 @@ const Products: React.FC = () => {
         return res.json()
       })
       .then((data) => {
-        const foundProduct = data.find((item: any) => item.slug === slug);
+        const foundProduct = data.find((item: ProductProps) => item.slug === slug);
         setProduct(foundProduct)
         setIsLoading(false)
       })
