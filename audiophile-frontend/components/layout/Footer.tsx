@@ -10,10 +10,10 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:w-full">
           <Image src={logo} width={140} height={140} alt="logo" />
           <nav className="flex gap-3 flex-col justify-center items-center md:items-start md:flex-row">
-            <Link className="hover:text-[#FBAF85]" href="#">HOME</Link>
-            <Link className="hover:text-[#FBAF85]" href="#">HEADPHONES</Link>
-            <Link className="hover:text-[#FBAF85]" href="#">SPEAKERS</Link>
-            <Link className="hover:text-[#FBAF85]" href="#">EARPHONES</Link>
+            <Link className="hover:text-[#FBAF85]" href="/">HOME</Link>
+            <Link className="hover:text-[#FBAF85]" href="/headphones">HEADPHONES</Link>
+            <Link className="hover:text-[#FBAF85]" href="/speakers">SPEAKERS</Link>
+            <Link className="hover:text-[#FBAF85]" href="/earphones">EARPHONES</Link>
           </nav>
         </div>
         <div className="lg:flex lg:justify-between lg:w-full">
