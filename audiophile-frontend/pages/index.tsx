@@ -22,7 +22,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <div className="relative bg-[#191919] flex items-center px-7 lg:px-40 ">
+      <div className="relative bg-[#191919] flex items-center">
         <div>
           <Image
             src={HeroMobile}

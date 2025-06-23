@@ -1,10 +1,6 @@
 import Image from "next/image"
-import { CartItemProps } from "@/interfaces/index"
+import { CartItemExtendedProps } from "@/interfaces/index"
 
-interface CartItemExtendedProps extends CartItemProps {
-  onRemove: () => void
-  onUpdateQuantity: (quantity: number) => void
-}
 
 const CartItem: React.FC<CartItemExtendedProps> = ({ slug, item, price, quantity, onRemove, onUpdateQuantity }) => {
   return (

@@ -97,7 +97,6 @@ export interface ProductOthersProps {
 export interface CartItemProps {
   item: string
   slug: string
-  imageUrl: string | StaticImageData
   quantity: number
   price: number
 }
@@ -136,4 +135,15 @@ export interface ProductProps {
   features: string
   gallery: GalleryProps
   others: OtherProps[]
+}
+
+
+export interface CartComponentProps {
+  showModal?: boolean
+  setShowModal?: (show: boolean) => void
+}
+
+export interface CartItemExtendedProps extends CartItemProps {
+  onRemove: () => void
+  onUpdateQuantity: (quantity: number) => void
 }
