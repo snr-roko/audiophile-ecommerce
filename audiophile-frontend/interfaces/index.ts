@@ -99,6 +99,7 @@ export interface CartItemProps {
   slug: string
   quantity: number
   price: number
+  imageUrl?: string | StaticImageData
 }
 
 export interface CartProps {
@@ -146,4 +147,12 @@ export interface CartComponentProps {
 export interface CartItemExtendedProps extends CartItemProps {
   onRemove: () => void
   onUpdateQuantity: (quantity: number) => void
+}
+
+export interface ProductDetailWithCart extends ProductDetailProps {
+  onAddToCart?: () => void
+}
+
+export interface ProductInfoWithCart extends ProductInfoProps {
+  onAddToCart?: () => void
 }

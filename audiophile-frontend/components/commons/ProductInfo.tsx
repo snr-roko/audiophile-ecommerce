@@ -2,37 +2,38 @@ import { ProductInfoProps } from "@/interfaces"
 import Image from "next/image"
 import Button from "./Button"
 import { useState } from "react"
+import { useCart } from "./CartContext"
 
 const ProductInfo: React.FC<ProductInfoProps> = (props) => {
   const [quantity, setQuantity] = useState(1)
-
-  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value)
-    if (value >= 1) {
-      setQuantity(value)
-    }
-  }
+  const { setCart, setShowCart } = useCart()
 
   const handleAddToCart = () => {
-    const existingCart = localStorage.getItem('audiophile-cart')
-    const cartItems = existingCart ? JSON.parse(existingCart) : []
-    
-    const existingItemIndex = cartItems.findIndex((item: any) => item.slug === props.slug)
-    
-    if (existingItemIndex >= 0) {
-      cartItems[existingItemIndex].quantity += quantity
-    } else {
-      cartItems.push({
-        slug: props.slug,
-        item: props.title,
-        price: props.price,
-        quantity: quantity,
-        imageUrl: props.mobileImageUrl
-      })
-    }
-    
-    localStorage.setItem('audiophile-cart', JSON.stringify(cartItems))
+    setCart(prevCart => {
+      const newItems = [...prevCart.items]
+      const existingItemIndex = newItems.findIndex(item => item.slug === props.slug)
+      if (existingItemIndex >= 0) {
+        newItems[existingItemIndex].quantity += quantity
+      } else {
+        newItems.push({
+          slug: props.slug,
+          item: props.title,
+          price: props.price,
+          quantity: quantity,
+          imageUrl: props.mobileImageUrl
+        })
+      }
+      return { items: newItems }
+    })
     setQuantity(1)
+    setShowCart(true)
+  }
+
+  const handleDecrease = () => {
+    setQuantity(q => Math.max(1, q - 1))
+  }
+  const handleIncrease = () => {
+    setQuantity(q => q + 1)
   }
 
   return (
@@ -68,14 +69,12 @@ const ProductInfo: React.FC<ProductInfoProps> = (props) => {
         </div>
         <p className="text-[#000000]/60 font-[300] text-sm text-left lg:w-4/5">{props.description}</p>
         <p className="text-[#000000] font-[800]">$ {props.price}</p>
-        <div className="grid grid-cols-2 gap-4">
-          <input 
-            type="number" 
-            min="1"
-            value={quantity}
-            onChange={handleQuantityChange}
-            className="bg-[#F1F1F1] p-4 text-center text-[#000000] border-none outline-none"
-          />
+        <div className="flex gap-4 items-center">
+          <div className="flex items-center gap-2 bg-[#F1F1F1] rounded">
+            <button onClick={handleDecrease} className="w-8 h-8 text-2xl text-[#000000] hover:text-[#D87D4A]">-</button>
+            <span className="w-8 text-center select-none">{quantity}</span>
+            <button onClick={handleIncrease} className="w-8 h-8 text-2xl text-[#000000] hover:text-[#D87D4A]">+</button>
+          </div>
           <Button text="ADD TO CART" action={handleAddToCart}/>
         </div>
       </div>

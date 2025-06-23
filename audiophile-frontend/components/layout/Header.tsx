@@ -3,25 +3,16 @@ import logo from "@/public/assets/shared/desktop/logo.svg"
 import shoppingCart from "@/public/assets/shared/desktop/icon-cart.svg"
 import menu from "@/public/assets/shared/tablet/icon-hamburger.svg"
 import Image from "next/image"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Cart from "@/components/commons/Cart"
-import { CartProps } from "@/interfaces"
 import CategoryStack from "@/components/commons/CategoryStack"
+import { useCart } from "@/components/commons/CartContext"
 
 const Header: React.FC = () => {
-  const [cart, setCart] = useState<CartProps>({ items: [] })
-  const [showCart, setShowCart] = useState(false)
+  const { cart, showCart, setShowCart } = useCart()
   const [showMenu, setShowMenu] = useState(false)
 
-  useEffect(() => {
-    const storedCart = localStorage.getItem('audiophile-cart')
-    if (storedCart) {
-      const parsedCart = JSON.parse(storedCart)
-      setCart({ items: parsedCart })
-    }
-  }, [])
-
-  const cartItemCount = cart.items.length
+  const cartItemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0)
 
   return (
     <header className="bg-[#191919] text-[#ffffff] px-7 lg:px-30 relative z-50">
@@ -51,7 +42,7 @@ const Header: React.FC = () => {
             )}
           </button>
           {showCart && (
-            <div className="absolute left-0 m-7 mt-4 w-[95vw] max-w-md z-50">
+            <div className="absolute right-0 mt-4 w-[95vw] max-w-md z-50" style={{minWidth:'320px'}}>
               <Cart showModal={showCart} setShowModal={setShowCart} />
             </div>
           )}

@@ -84,6 +84,7 @@ const Cart: React.FC<CartComponentProps> = ({ showModal = false, setShowModal })
                   item={item.item}
                   price={item.price}
                   quantity={item.quantity}
+                  imageUrl={item.imageUrl || `/assets/cart/image-${item.slug}.jpg`}
                   onRemove={() => removeItem(item.slug)}
                   onUpdateQuantity={(quantity) => updateQuantity(item.slug, quantity)}
                 />

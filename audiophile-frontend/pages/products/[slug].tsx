@@ -92,18 +92,21 @@ const Products: React.FC = () => {
 
   return (
     <div className="px-7 lg:px-40 py-20 flex flex-col gap-30 w-full bg-[#FFFFFF]" >
-      <ProductDetail
-        mobileMainImageUrl={product.image.mobile}
-        tabletMainImageUrl={product.image.tablet}
-        desktopMainImageUrl={product.image.desktop}
-        new={product.new}
-        title={product.name.split(' ').slice(0, -1).join(' ').toUpperCase()}
-        category={product.category.toUpperCase()}
-        description={product.description}
-        price={product.price}
-        slug={product.slug}
-        action={() => console.log('clicked')} 
-      />
+      <div>
+        <p onClick={() => router.back()} className="text-[#000000]/60 hover:cursor-pointer mb-5">Go Back</p>
+        <ProductDetail
+          mobileMainImageUrl={product.image.mobile}
+          tabletMainImageUrl={product.image.tablet}
+          desktopMainImageUrl={product.image.desktop}
+          new={product.new}
+          title={product.name.split(' ').slice(0, -1).join(' ').toUpperCase()}
+          category={product.category.toUpperCase()}
+          description={product.description}
+          price={product.price}
+          slug={product.slug}
+          action={() => console.log('clicked')}
+        />
+      </div>
       <ProductFeature
         feature={product.features}
         includes={product.includes}
