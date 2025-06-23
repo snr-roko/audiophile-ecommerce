@@ -1,41 +1,25 @@
 import Button from "@/components/commons/Button"
 import CartItem from "@/components/commons/CartItem"
-import { useEffect, useState } from "react"
-import { CartProps, CartItemProps, CartComponentProps } from "@/interfaces"
+import { CartComponentProps } from "@/interfaces"
 import { useRouter } from "next/router"
-
+import { useCart } from "./CartContext"
 
 const Cart: React.FC<CartComponentProps> = ({ showModal = false, setShowModal }) => {
-  const [cart, setCart] = useState<CartProps>({ items: [] })
   const router = useRouter()
-
-  useEffect(() => {
-    if (showModal) {
-      const storedCart: string | null = localStorage.getItem('audiophile-cart')
-      if (storedCart) {
-        const parsedCart: CartItemProps[] = JSON.parse(storedCart)
-        setCart({ items: parsedCart })
-      } else {
-        setCart({ items: [] })
-      }
-    }
-  }, [showModal])
-
-  useEffect(() => {
-    localStorage.setItem('audiophile-cart', JSON.stringify(cart.items))
-  }, [cart])
+  const { cart, setCart } = useCart()
 
   const itemsCount: number = cart.items.length
   const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0)
 
   const removeAll = () => {
     setCart({ items: [] })
+    localStorage.removeItem('audiophile-cart')
   }
 
   const removeItem = (slug: string) => {
-    setCart({
-      items: cart.items.filter(item => item.slug !== slug)
-    })
+    const newItems = cart.items.filter(item => item.slug !== slug)
+    setCart({ items: newItems })
+    localStorage.setItem('audiophile-cart', JSON.stringify(newItems))
   }
 
   const updateQuantity = (slug: string, quantity: number) => {
@@ -43,11 +27,11 @@ const Cart: React.FC<CartComponentProps> = ({ showModal = false, setShowModal })
       removeItem(slug)
       return
     }
-    setCart({
-      items: cart.items.map(item => 
-        item.slug === slug ? { ...item, quantity } : item
-      )
-    })
+    const newItems = cart.items.map(item => 
+      item.slug === slug ? { ...item, quantity } : item
+    )
+    setCart({ items: newItems })
+    localStorage.setItem('audiophile-cart', JSON.stringify(newItems))
   }
 
   const handleClose = () => {
@@ -77,7 +61,7 @@ const Cart: React.FC<CartComponentProps> = ({ showModal = false, setShowModal })
         ) : (
           <>
             <div className="space-y-4 mb-6">
-              {cart.items.map((item: CartItemProps) => (
+              {cart.items.map((item) => (
                 <CartItem
                   key={item.slug}
                   slug={item.slug}
