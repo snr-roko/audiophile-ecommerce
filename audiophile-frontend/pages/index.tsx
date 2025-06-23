@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import HeroDesktop from "@/public/assets/home/desktop/image-hero.jpg"
 import HeroTablet from "@/public/assets/home/tablet/image-header.jpg"
 import HeroMobile from "@/public/assets/home/mobile/image-header.jpg"
