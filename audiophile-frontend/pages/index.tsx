@@ -127,7 +127,7 @@ const Home: React.FC = () => {
             />
             <div className="absolute inset-0 flex flex-col justify-center items-start pl-6 md:pl-16 z-10">
               <h2 className="text-black text-3xl font-bold mb-6">ZX7 SPEAKER</h2>
-              <button onClick={() => router.push('/products/zx7-speaker')} className="border border-black text-[#000000] px-8 py-3 font-bold tracking-widest text-sm hover:bg-[#000000] hover:text-[#ffffff] transition">
+              <button onClick={() => router.push('/products/zx7-speaker')} className="hover:cursor-pointer border border-black text-[#000000] px-8 py-3 font-bold tracking-widest text-sm hover:bg-[#000000] hover:text-[#ffffff] transition">
                 SEE PRODUCT
               </button>
             </div>
@@ -157,7 +157,7 @@ const Home: React.FC = () => {
           <div className="w-full md:w-1/2 flex items-center">
             <div className="bg-[#F1F1F1] rounded-lg w-full h-full flex flex-col justify-center items-start pl-6 md:pl-12 py-10">
               <h2 className="text-black text-3xl font-bold mb-6">YX1 EARPHONES</h2>
-              <button onClick={() => router.push('/products/yx1-earphones')} className="border border-black text-black px-8 py-3 font-bold tracking-widest text-sm hover:bg-black hover:text-white transition">
+              <button onClick={() => router.push('/products/yx1-earphones')} className="hover:cursor-pointer border border-black text-black px-8 py-3 font-bold tracking-widest text-sm hover:bg-black hover:text-white transition">
                 SEE PRODUCT
               </button>
             </div>
